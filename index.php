@@ -13,17 +13,9 @@
 <body onLoad="disp(); counter();">
 
 	<h1><div id="ito"></div></h1>
-	<?php
-	try{
-		$pdo = new PDO('mysql:host=localhost; dbname=simple_hp; charset=utf8', 'itou', 'itou');
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-		print "接続しました。";
-	}catch(PDOException $Exception){
-		die('接続エラー：'. $Exception->getMessage());
-	}
-	?>
 	<div id="counter"></div>
+
+	<?php include('./php/preserve_counter.php'); ?>
 
 </body>
 </html>
