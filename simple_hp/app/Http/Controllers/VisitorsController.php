@@ -13,7 +13,7 @@ class VisitorsController extends Controller
 
     public static function fetchCounter(){
     	// $visitors = DB::table('total_visitors')->where('id', 1)->value('total_visitors');
-    	include('./php/preserve_counter.php');
+    	include('./php/update_counter.php');
     	return $visitors_num;
     }
 }
