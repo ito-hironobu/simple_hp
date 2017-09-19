@@ -6,16 +6,20 @@
     <script type="text/javascript" src="./jquery/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="./jquery/jquery.cookie.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/arrangement.css">
-    <script type="text/javascript" src="js/flash.js"></script>
-    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript" src="./js/flash.js"></script>
+    <!-- <script type="text/javascript" src="./js/counter.js"></script> -->
 </head>
 
-<body onLoad="disp(); counter();">
+<body onLoad="disp();">
 
     <h1><div id="ito">テスト</div></h1>
-    <div id="counter">123</div>
-
-    <?php //include('./php/preserve_counter.php'); ?>
+    <div id="counter">
+        <?php
+        // \App\Http\Controllers\VisitorsController::updateCounter();
+        $a = \App\Http\Controllers\VisitorsController::fetchCounter();
+        echo $a;
+        ?>
+    </div>
 
 </body>
 </html>
