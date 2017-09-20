@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class VisitorsController extends Controller
 {
     public function index(){
-    	return view('visitors.index');
+    	$visitors_num = $this->fetchCounter();
+    	return view('visitors.index')->with('counter', $visitors_num);
     }
 
-    public static function fetchCounter(){
-    	// $visitors = DB::table('total_visitors')->where('id', 1)->value('total_visitors');
+    public function fetchCounter(){
     	include('./php/update_counter.php');
     	return $visitors_num;
     }

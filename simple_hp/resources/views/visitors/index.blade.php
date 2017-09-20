@@ -14,12 +14,7 @@
 
     <h1><div id="ito">テスト</div></h1>
     <div id="counter">
-        あなたは
-        <?php
-        $visitors_num = \App\Http\Controllers\VisitorsController::fetchCounter();
-        echo $visitors_num;
-        ?>
-        番目の訪問者です。
+        あなたは{{ $counter }}番目の訪問者です。
     </div>
 
 </body>
