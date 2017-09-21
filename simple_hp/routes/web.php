@@ -11,11 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('visitors.index');
-});
-
-Route::get('/api/counter', function () {
-    // return view('welcome');
-    return 5;
-});
+Route::get('/',				'VisitorsController@index');
