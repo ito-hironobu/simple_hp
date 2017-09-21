@@ -12,4 +12,3 @@
 */
 
 Route::get('/',				'VisitorsController@index');
-Route::get('/api/counter', 	'VisitorsController@counter');
